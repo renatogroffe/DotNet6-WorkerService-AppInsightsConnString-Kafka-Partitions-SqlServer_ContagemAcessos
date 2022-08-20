@@ -1,0 +1,21 @@
+CREATE DATABASE BaseContagemKafka
+GO
+
+USE BaseContagemKafka
+GO
+
+CREATE TABLE dbo.HistoricoContagem(
+    Id INT IDENTITY(1,1) NOT NULL,
+    DataProcessamento DATETIME NOT NULL,
+    ValorAtual INT NOT NULL,
+	Topico VARCHAR(120) NOT NULL,
+	Particao INT NOT NULL,
+    Producer VARCHAR(120) NOT NULL,
+    Consumer VARCHAR(120) NOT NULL,
+	ConsumerGroup VARCHAR(120) NOT NULL,
+    Mensagem VARCHAR(500) NOT NULL,
+    Kernel VARCHAR(80) NOT NULL,
+    Framework VARCHAR(80) NOT NULL,
+    CONSTRAINT PK_HistoricoContagem PRIMARY KEY (Id)
+)
+GO

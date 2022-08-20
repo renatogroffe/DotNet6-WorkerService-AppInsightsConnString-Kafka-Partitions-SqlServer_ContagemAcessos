@@ -1,0 +1,18 @@
+apiVersion: keda.sh/v1alpha1
+kind: TriggerAuthentication
+metadata:
+  name: workercontagem-triggerauth-kafka
+spec:
+  secretTargetRef:
+  - parameter: sasl
+    name: workercontagemsecret
+    key: SaslKafka
+  - parameter: username
+    name: workercontagemsecret
+    key: UsernameKafka
+  - parameter: password
+    name: workercontagemsecret
+    key: PasswordKafka
+  - parameter: tls
+    name: workercontagemsecret
+    key: TlsKafka
